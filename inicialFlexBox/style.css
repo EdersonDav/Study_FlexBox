@@ -1,0 +1,50 @@
+body, #app {
+  height: 100vh;
+  margin: 0;
+}
+
+#app{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.box{
+  height: 100px;
+  width: 200px;
+  margin: 5px;
+}
+
+.red{
+  background-color: red;
+  order: 1
+}
+
+.green{
+  background-color: green;
+  order : 0
+}
+
+.blue{
+  background-color: blue;
+  order: 2
+}
+
+@media(max-width: 420px){
+  #app{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .red{
+    order: 2
+  }
+  
+  .green{
+    order : 1
+  }
+  
+  .blue{
+    order: 0
+  }
+}
